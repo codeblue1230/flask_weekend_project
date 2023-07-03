@@ -1,0 +1,46 @@
+{% extends 'nav.html' %}
+
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <h3>Here are your profile details</h3>
+        <ul class="list-group">
+            <li class="list-group-item">Email: {{ current_user.email }}</li>
+            <li class="list-group-item">Token: {{ current_user.token }}</li>
+        </ul>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-8 col-md-3">
+        <h2>Add a Game to your collection!</h2>
+        {% include 'gameform.html' %}
+    </div>
+    <div class="col-1"></div>
+    <div class="col-12 col-md-8" id="profile-main-image">
+        <img src="../../static/images/rocket_league.jpg" alt="Rocket League Salty Shores" style="height: 100%; width: 75%;">
+    </div>
+</div>
+
+
+<div class="row">
+    {% for game in games %}
+    <div class="card mt-5 col-md-6 col-12">
+        <img class="card-img-top" src="../../static/images/car_pic.jpg" alt="Video Game Image" style="height: 60vh; width: 50vw;" id="car-image">
+        <div class="card-body">
+          <h5 class="card-title">{{ game.name }}</h5>
+          <p class="card-text">{{ game.description }}</p>
+          <p class="card-text">{{ game.price }}</p>
+          <p class="card-text">{{ game.system }}</p>
+          <p class="card-text">{{ game.year_made }}</p>
+          <p class="card-text"><small class="text-muted">{{ game.genre }}</small></p>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock content %}

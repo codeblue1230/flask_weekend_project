@@ -1,0 +1,106 @@
+/* Navbar (located in nav.html) */
+
+.nav {
+    background-color: grey;
+}
+
+.nav a {
+    color: black;
+    height: 8vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+.nav a:hover {
+    background-color: rgb(137, 1, 1);
+    color: white;
+    border: none;
+}
+
+/* Landing Page (located in landing.html) */
+
+/* Landing Page header */
+
+#header-parent {
+    padding: 0;
+    margin: 8vh 0 0 0;
+}
+
+.image-containers {
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+.landing-images {
+    height: 30vh;
+    width: 65%;
+    border: solid #5b79ff 5px;
+    border-radius: 10px;
+}
+
+#right-text-box {
+    font-size: 1.25rem;
+    width: 55%;
+    color: black;
+    font-family: fantasy;
+}  
+
+/* Landing Page Main Section */
+
+#main-image {
+    width: 100%;
+    height: 50vh;
+}
+
+.main-image-parent {
+    margin: 0;
+    padding: 0;
+    border: solid #5b79ff 5px;
+    border-radius: 10px;
+}
+
+#main-parent {
+    margin: 50px 0 100px 0;
+    padding: 0;
+}
+
+/* Profile Page  */
+
+#profile-main-image {
+    height: 65vh;
+}
+
+/* Miscellaneous */
+
+body {
+    background-color: rgb(181, 235, 253);
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Queries */
+
+@media screen and ( max-width: 575px) {
+    .landing-images {width: 100%;}
+    #right-text-box {width: 100%;}
+    #profile-main-image {
+        width: 75%;
+        height: 50%;
+    }
+}
+
+@media screen and ( min-width: 992px) {
+    .landing-images {width: 100%;}
+    .image-containers {margin: 0 5px 0 5px;}
+}
+
+
+
+
+
